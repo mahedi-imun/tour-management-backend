@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 function dbConnect(){
-  mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.fcuh9cy.mongodb.net/?retryWrites=true&w=majority`)
+  mongoose.connect(`mongodb+srv://tourAdmin:RIucOBwpcqnZASdR@cluster0.orvnefn.mongodb.net/?retryWrites=true&w=majority`)
+  .then(() => {
+    console.log('Tour-Management server is running');
+  })
+  .catch((error) => {
+    // console.log(error)
+  })
 }
 
 module.exports = dbConnect;
