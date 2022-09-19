@@ -19,11 +19,7 @@ app.use('/api/v1/tour',tourRouter)
 
 // ejs
 app.get("/", (req, res) => {
-  res.render("home.ejs", {
-    user: {
-      name: "test"
-    }
-  });
+  res.send('server is running')
 });
 
 app.all("*", (req, res) => {
