@@ -44,8 +44,13 @@ const tourSchema = new Schema({
         type:String,
         require: [true, 'please provide a valid package features name'],
         trim: true,
+    },
+  
+    ],
+    viewCount:{
+        require:false,
+        type:Number
     }
-    ]
 }, { timestamps: true });
 
 module.exports = mongoose.model('Tours', tourSchema);
